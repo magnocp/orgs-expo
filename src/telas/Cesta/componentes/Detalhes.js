@@ -1,13 +1,15 @@
-import { View, StyleSheet, Image } from 'react-native'
+import { View, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
 import Texto from '../../../componentes/Texto'
+import Botao from '../../../componentes/Botao'
 
 export default function Detalhes({
   nome,
   logoFazenda,
   nomeFazenda,
   descricao,
-  preco
+  preco,
+  botao
 }) {
   return (
     <>
@@ -18,6 +20,8 @@ export default function Detalhes({
       </View>
       <Texto style={estilos.descricao}>{descricao}</Texto>
       <Texto style={estilos.preco}>{preco}</Texto>
+
+      <Botao>{botao}</Botao>
     </>
   )
 }
